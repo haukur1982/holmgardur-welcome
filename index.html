@@ -48,9 +48,6 @@
       <h1 class="hero-title">Your Home<br>in Iceland</h1>
       <div class="hero-divider"></div>
       <p class="hero-subtitle">We're delighted to host you and hope you have a comfortable, memorable stay. This guide has everything you need.</p>
-      <div class="welcome-sign fade-in">
-        <img src="Screenshot 2026-02-15 at 15.08.46.png" alt="Welcome sign on the front door" loading="lazy">
-      </div>
       <div class="hero-host">
         <p>Hosted by <strong>Jón Gunnar</strong></p>
         <p class="hero-address">Holmgardur 1, 108 Reykjavík</p>
@@ -125,6 +122,10 @@
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           Open in Google Maps
         </a>
+      </div>
+      <div class="welcome-door fade-in">
+        <img src="Screenshot 2026-02-15 at 15.08.46.png" alt="Welcome sign on the front door" loading="lazy">
+        <p>Look for this sign on the front door</p>
       </div>
     </div>
   </section>
@@ -301,9 +302,41 @@
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
-        <div class="parking-annotation parking-spot-label">
-          <span class="parking-icon">🅿️</span> Your spot
-        </div>
+        <svg class="parking-svg" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <!-- Red dashed driving path from road to parking -->
+          <path d="M 80,380 C 80,300 120,240 180,200 Q 220,170 280,165"
+                stroke="#e53e3e" stroke-width="2.5" stroke-dasharray="8 5"
+                fill="none" stroke-linecap="round"/>
+          <!-- Arrow at end of path -->
+          <polygon points="278,160 288,165 278,170" fill="#e53e3e"/>
+
+          <!-- Parking area background -->
+          <rect x="285" y="140" width="120" height="55" rx="4"
+                fill="rgba(139,119,90,0.4)" stroke="rgba(139,119,90,0.6)" stroke-width="1"/>
+
+          <!-- Hatched no-park zone (left side of parking) -->
+          <defs>
+            <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+              <line x1="0" y1="0" x2="0" y2="8" stroke="#e53e3e" stroke-width="1.5" opacity="0.6"/>
+            </pattern>
+          </defs>
+          <rect x="287" y="142" width="35" height="51" fill="url(#hatch)" rx="2"/>
+
+          <!-- Car spots (blue rectangles) -->
+          <rect x="325" y="145" width="22" height="42" rx="3" fill="#3182ce" opacity="0.8"/>
+          <rect x="350" y="145" width="22" height="42" rx="3" fill="#3182ce" opacity="0.8"/>
+          <rect x="375" y="145" width="22" height="42" rx="3" fill="#3182ce" opacity="0.8"/>
+
+          <!-- Airbnb label on the parking spot -->
+          <rect x="330" y="192" width="60" height="18" rx="3" fill="rgba(0,0,0,0.7)"/>
+          <text x="360" y="205" text-anchor="middle" fill="white"
+                font-family="'DM Sans', sans-serif" font-size="11" font-weight="600">Airbnb</text>
+
+          <!-- Welcome label near the front door -->
+          <rect x="345" y="230" width="62" height="18" rx="3" fill="rgba(0,0,0,0.7)"/>
+          <text x="376" y="243" text-anchor="middle" fill="white"
+                font-family="'DM Sans', sans-serif" font-size="10" font-weight="500">Welcome</text>
+        </svg>
       </div>
     </div>
   </section>
