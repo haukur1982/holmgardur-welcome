@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Holmgardur — Your Home in Iceland</title>
+  <meta name="description" content="Welcome book for guests staying at Holmgardur 1, Reykjavik. Everything you need for a great stay in Iceland.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Welcome to Holmgardur — Your Home in Iceland">
+  <meta property="og:description" content="Your complete guide to a wonderful stay in Reykjavik">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav" id="bottomNav">
+    <a href="#welcome" class="nav-item active" data-section="welcome" aria-label="Welcome">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span>Home</span>
+    </a>
+    <a href="#quick-ref" class="nav-item" data-section="quick-ref" aria-label="Quick Info">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+      <span>Info</span>
+    </a>
+    <a href="#recommendations" class="nav-item" data-section="recommendations" aria-label="Local Picks">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <span>Explore</span>
+    </a>
+    <a href="#checkout" class="nav-item" data-section="checkout" aria-label="Check-out">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      <span>Check-out</span>
+    </a>
+  </nav>
+
+  <!-- ==================== HERO / WELCOME ==================== -->
+  <section class="hero" id="welcome">
+    <div class="hero-overlay"></div>
+    <div class="hero-content fade-in">
+      <p class="hero-greeting">Velkomin — Welcome</p>
+      <h1 class="hero-title">Your Home<br>in Iceland</h1>
+      <div class="hero-divider"></div>
+      <p class="hero-subtitle">We're delighted to host you and hope you have a comfortable, memorable stay. This guide has everything you need.</p>
+      <div class="hero-host">
+        <p>Hosted by <strong>Jón Gunnar</strong></p>
+        <p class="hero-address">Holmgardur 1, 108 Reykjavík</p>
+      </div>
+      <a href="#quick-ref" class="scroll-cue" aria-label="Scroll down">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ==================== QUICK REFERENCE ==================== -->
+  <section class="section" id="quick-ref">
+    <div class="container">
+      <div class="quick-ref-card fade-in">
+        <h2 class="section-label">Quick Reference</h2>
+        <div class="quick-grid">
+          <!-- WiFi -->
+          <div class="quick-item">
+            <div class="quick-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+            </div>
+            <div class="quick-detail">
+              <span class="quick-label">WiFi Network</span>
+              <span class="quick-value">welcome</span>
+              <div class="wifi-password-row">
+                <span class="quick-label">Password</span>
+                <span class="quick-value" id="wifiPassword">Iceland247</span>
+                <button class="copy-btn" id="copyWifi" aria-label="Copy WiFi password">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                  <span class="copy-label">Copy</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Check-in/out -->
+          <div class="quick-item">
+            <div class="quick-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="quick-detail">
+              <span class="quick-label">Check-in</span>
+              <span class="quick-value">15:00</span>
+              <span class="quick-label">Check-out</span>
+              <span class="quick-value">12:00</span>
+            </div>
+          </div>
+          <!-- Host Contact -->
+          <div class="quick-item">
+            <div class="quick-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="quick-detail">
+              <span class="quick-label">Host — Jón Gunnar</span>
+              <a href="tel:+3548402221" class="quick-value quick-link">+354 840 2221</a>
+              <a href="mailto:jon@son.is" class="quick-value quick-link">jon@son.is</a>
+              <a href="https://wa.me/3548402221" class="quick-value quick-link whatsapp-link">WhatsApp</a>
+            </div>
+          </div>
+          <!-- Emergency -->
+          <div class="quick-item emergency-item">
+            <div class="quick-icon emergency-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+            <div class="quick-detail">
+              <span class="quick-label">Emergency</span>
+              <a href="tel:112" class="quick-value quick-link emergency-number">112</a>
+            </div>
+          </div>
+        </div>
+        <!-- Google Maps link -->
+        <a href="https://maps.app.goo.gl/emGqUPZEXgZnPwYy6" target="_blank" rel="noopener" class="maps-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Open in Google Maps
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== HOUSE GUIDELINES ==================== -->
+  <section class="section section-cream" id="guidelines">
+    <div class="container">
+      <h2 class="section-title fade-in">House Guidelines</h2>
+      <p class="section-intro fade-in">A few simple things to keep the home comfortable for everyone.</p>
+      <div class="guidelines-grid fade-in">
+        <div class="guideline-item">
+          <span class="guideline-icon">🚭</span>
+          <div>
+            <strong>No smoking indoors</strong>
+            <p>Please smoke outside only</p>
+          </div>
+        </div>
+        <div class="guideline-item">
+          <span class="guideline-icon">🤫</span>
+          <div>
+            <strong>Quiet hours</strong>
+            <p>22:00 – 08:00</p>
+          </div>
+        </div>
+        <div class="guideline-item">
+          <span class="guideline-icon">👟</span>
+          <div>
+            <strong>Shoes off indoors</strong>
+            <p>Icelandic tradition — feel at home!</p>
+          </div>
+        </div>
+        <div class="guideline-item">
+          <span class="guideline-icon">🏠</span>
+          <div>
+            <strong>Treat the home with care</strong>
+            <p>If anything breaks, just let us know — no worries</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== WATER IN ICELAND ==================== -->
+  <section class="section" id="water">
+    <div class="container">
+      <h2 class="section-title fade-in">Water in Iceland</h2>
+      <p class="section-intro fade-in">This is important — water works differently here than in most countries.</p>
+      <div class="water-grid fade-in">
+        <div class="water-card water-hot">
+          <div class="water-card-header">
+            <span class="water-temp-icon">🔥</span>
+            <h3>Hot Water</h3>
+          </div>
+          <ul>
+            <li>Comes directly from natural <strong>geothermal springs</strong></li>
+            <li>May have a <strong>sulfur smell</strong> (like eggs) — completely normal and harmless</li>
+            <li>Can be <strong>very hot</strong> — open taps carefully, especially with children</li>
+            <li><strong>Not recommended</strong> for drinking</li>
+          </ul>
+        </div>
+        <div class="water-card water-cold">
+          <div class="water-card-header">
+            <span class="water-temp-icon">❄️</span>
+            <h3>Cold Water</h3>
+          </div>
+          <ul>
+            <li>Pure <strong>Icelandic spring water</strong></li>
+            <li><strong>Safe to drink</strong> directly from the tap</li>
+            <li>Among the <strong>cleanest water in the world</strong></li>
+            <li>No need to buy bottled water!</li>
+          </ul>
+        </div>
+      </div>
+      <div class="water-note fade-in">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        <p>Our shower has an <strong>automatic mixer</strong> — the temperature is regulated automatically, no manual adjustment needed.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BATHROOM & LAUNDRY ==================== -->
+  <section class="section section-cream" id="bathroom">
+    <div class="container">
+      <h2 class="section-title fade-in">Bathroom & Laundry</h2>
+      <div class="icon-list fade-in">
+        <div class="icon-list-item">
+          <span class="list-icon">🚽</span>
+          <p>Only <strong>toilet paper</strong> in the toilet — no wipes or hygiene products</p>
+        </div>
+        <div class="icon-list-item">
+          <span class="list-icon">🛁</span>
+          <p>Towels provided for <strong>indoor use only</strong></p>
+        </div>
+        <div class="icon-list-item">
+          <span class="list-icon">👕</span>
+          <p><strong>Washing machine, dryer, and detergent</strong> available for your use</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== KITCHEN ==================== -->
+  <section class="section" id="kitchen">
+    <div class="container">
+      <h2 class="section-title fade-in">Kitchen</h2>
+      <div class="icon-list fade-in">
+        <div class="icon-list-item">
+          <span class="list-icon">🧂</span>
+          <p>Feel free to use <strong>basic items</strong> — salt, pepper, oil</p>
+        </div>
+        <div class="icon-list-item">
+          <span class="list-icon">🍽️</span>
+          <p><strong>Dishwasher</strong> available — please load before check-out</p>
+        </div>
+        <div class="icon-list-item">
+          <span class="list-icon">🧹</span>
+          <p>Please <strong>wash dishes</strong> or run the dishwasher before leaving</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TRASH & RECYCLING ==================== -->
+  <section class="section section-cream" id="trash">
+    <div class="container">
+      <h2 class="section-title fade-in">Trash & Recycling</h2>
+      <p class="section-intro fade-in">Iceland takes recycling seriously — please help us sort waste correctly.</p>
+      <div class="trash-grid fade-in">
+        <div class="trash-item">
+          <div class="trash-icon" style="background: #4a5568;">🗑️</div>
+          <span class="trash-label">General Waste</span>
+          <span class="trash-detail">Kitchen bin</span>
+        </div>
+        <div class="trash-item">
+          <div class="trash-icon" style="background: #8faab5;">🥬</div>
+          <span class="trash-label">Organic</span>
+          <span class="trash-detail">Bin with paper bag</span>
+        </div>
+        <div class="trash-item">
+          <div class="trash-icon" style="background: #5b8a9a;">📄</div>
+          <span class="trash-label">Paper</span>
+          <span class="trash-detail">Separate bin</span>
+        </div>
+        <div class="trash-item">
+          <div class="trash-icon" style="background: #4a7c8a;">♻️</div>
+          <span class="trash-label">Plastic</span>
+          <span class="trash-detail">Separate bin</span>
+        </div>
+        <div class="trash-item">
+          <div class="trash-icon" style="background: #6a9caa;">🍾</div>
+          <span class="trash-label">Bottles</span>
+          <span class="trash-detail">Separate bin</span>
+        </div>
+      </div>
+      <p class="trash-note fade-in">If bins are full, take trash outside to the <strong>large bins</strong> near the house.</p>
+    </div>
+  </section>
+
+  <!-- ==================== PARKING ==================== -->
+  <section class="section" id="parking">
+    <div class="container">
+      <h2 class="section-title fade-in">Parking</h2>
+      <div class="parking-card fade-in">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        <div>
+          <p><strong>Private parking</strong> in front of the house</p>
+          <p class="parking-note">Please do not park on the street — we have a dedicated spot for you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SAFETY ==================== -->
+  <section class="section section-cream" id="safety">
+    <div class="container">
+      <h2 class="section-title fade-in">Safety</h2>
+      <div class="safety-grid fade-in">
+        <div class="safety-item">
+          <span class="safety-icon">📞</span>
+          <div>
+            <strong>Emergency: <a href="tel:112" class="emergency-inline">112</a></strong>
+            <p>Police, ambulance & fire</p>
+          </div>
+        </div>
+        <div class="safety-item">
+          <span class="safety-icon">🧯</span>
+          <div>
+            <strong>Fire extinguisher</strong>
+            <p>Available in the house</p>
+          </div>
+        </div>
+        <div class="safety-item">
+          <span class="safety-icon">🩹</span>
+          <div>
+            <strong>First aid kit</strong>
+            <p>Available in the house</p>
+          </div>
+        </div>
+        <div class="safety-item">
+          <span class="safety-icon">🌍</span>
+          <div>
+            <strong>Earthquakes</strong>
+            <p>Rare but possible — stay calm, move away from windows</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== GETTING AROUND ==================== -->
+  <section class="section" id="getting-around">
+    <div class="container">
+      <h2 class="section-title fade-in">Getting Around</h2>
+      <p class="section-intro fade-in">Tips for exploring Reykjavík and beyond.</p>
+      <div class="getting-around-grid fade-in">
+        <a href="https://www.road.is" target="_blank" rel="noopener" class="resource-card">
+          <span class="resource-icon">🛣️</span>
+          <strong>road.is</strong>
+          <p>Road conditions & closures</p>
+        </a>
+        <a href="https://www.vedur.is" target="_blank" rel="noopener" class="resource-card">
+          <span class="resource-icon">🌤️</span>
+          <strong>vedur.is</strong>
+          <p>Weather forecast</p>
+        </a>
+        <div class="resource-card">
+          <span class="resource-icon">🚗</span>
+          <strong>Car rental</strong>
+          <p>Highly recommended for both city & countryside</p>
+        </div>
+      </div>
+      <div class="tips-box fade-in">
+        <h3>Tips for Visitors</h3>
+        <ul>
+          <li>Always check weather <strong>before</strong> driving</li>
+          <li>Dress in layers — wind & rain can change quickly</li>
+          <li>Tap water is extremely clean — drink it!</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LOCAL RECOMMENDATIONS ==================== -->
+  <section class="section section-cream" id="recommendations">
+    <div class="container">
+      <h2 class="section-title fade-in">Our Local Picks</h2>
+      <p class="section-intro fade-in">Our personal favorites in the neighborhood.</p>
+
+      <!-- Restaurants -->
+      <h3 class="subsection-title fade-in">Food & Cafés</h3>
+      <div class="reco-grid fade-in">
+        <a href="https://maps.app.goo.gl/Eldofninn" target="_blank" rel="noopener" class="reco-card">
+          <span class="reco-emoji">🍕</span>
+          <div>
+            <strong>Eldofninn</strong>
+            <p>Best pizza in Iceland — 5 min walk</p>
+          </div>
+          <span class="reco-arrow">→</span>
+        </a>
+        <a href="https://maps.app.goo.gl/AusturbaejarIs" target="_blank" rel="noopener" class="reco-card">
+          <span class="reco-emoji">🍦</span>
+          <div>
+            <strong>Austurbæjar Ís</strong>
+            <p>Legendary ice cream — next to Eldofninn</p>
+          </div>
+          <span class="reco-arrow">→</span>
+        </a>
+        <a href="https://www.google.com/maps/search/Thai+Kitchen+Ármúli+21+Reykjavik" target="_blank" rel="noopener" class="reco-card">
+          <span class="reco-emoji">🍜</span>
+          <div>
+            <strong>Thai Kitchen</strong>
+            <p>Great Thai food — Ármúli 21</p>
+          </div>
+          <span class="reco-arrow">→</span>
+        </a>
+        <a href="https://www.google.com/maps/search/Bombay+Bazaar+Ármúli+10+Reykjavik" target="_blank" rel="noopener" class="reco-card">
+          <span class="reco-emoji">🍛</span>
+          <div>
+            <strong>Bombay Bazaar</strong>
+            <p>Indian cuisine — Ármúli 10</p>
+          </div>
+          <span class="reco-arrow">→</span>
+        </a>
+        <a href="https://www.google.com/maps/search/Tian+Chinese+Restaurant+Grensásvegur+12+Reykjavik" target="_blank" rel="noopener" class="reco-card">
+          <span class="reco-emoji">🥡</span>
+          <div>
+            <strong>Tian Chinese Restaurant</strong>
+            <p>Chinese food — Grensásvegur 12</p>
+          </div>
+          <span class="reco-arrow">→</span>
+        </a>
+        <div class="reco-card reco-card-note">
+          <span class="reco-emoji">🍽️</span>
+          <div>
+            <strong>Skeifan area</strong>
+            <p>Many more restaurants within walking distance</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Groceries -->
+      <h3 class="subsection-title fade-in">Groceries</h3>
+      <div class="reco-grid fade-in">
+        <a href="https://www.google.com/maps/search/Bónus+Skeifan+Reykjavik" target="_blank" rel="noopener" class="reco-card">
+          <span class="reco-emoji">💛</span>
+          <div>
+            <strong>Bónus</strong>
+            <p>Lowest prices — Skeifan</p>
+          </div>
+          <span class="reco-arrow">→</span>
+        </a>
+        <a href="https://www.google.com/maps/search/Krónan+Skeifan+Reykjavik" target="_blank" rel="noopener" class="reco-card">
+          <span class="reco-emoji">🛒</span>
+          <div>
+            <strong>Krónan</strong>
+            <p>Great selection — Skeifan</p>
+          </div>
+          <span class="reco-arrow">→</span>
+        </a>
+        <a href="https://www.google.com/maps/search/Nettó+Glæsibær+Reykjavik" target="_blank" rel="noopener" class="reco-card">
+          <span class="reco-emoji">🛒</span>
+          <div>
+            <strong>Nettó</strong>
+            <p>Budget-friendly — Glæsibær</p>
+          </div>
+          <span class="reco-arrow">→</span>
+        </a>
+        <a href="https://www.google.com/maps/search/Hagkaup+Skeifan+Reykjavik" target="_blank" rel="noopener" class="reco-card">
+          <span class="reco-emoji">🏪</span>
+          <div>
+            <strong>Hagkaup</strong>
+            <p>Open 24/7 — Skeifan</p>
+          </div>
+          <span class="reco-arrow">→</span>
+        </a>
+      </div>
+
+      <!-- Shopping -->
+      <h3 class="subsection-title fade-in">Shopping</h3>
+      <div class="reco-grid fade-in">
+        <a href="https://www.google.com/maps/search/Kringlan+Shopping+Mall+Reykjavik" target="_blank" rel="noopener" class="reco-card">
+          <span class="reco-emoji">🛍️</span>
+          <div>
+            <strong>Kringlan</strong>
+            <p>Shopping mall with everything you need</p>
+          </div>
+          <span class="reco-arrow">→</span>
+        </a>
+        <a href="https://www.google.com/maps/search/66+North+Skeifan+Reykjavik" target="_blank" rel="noopener" class="reco-card">
+          <span class="reco-emoji">🧥</span>
+          <div>
+            <strong>66°North</strong>
+            <p>Iconic Icelandic outdoor clothing — Skeifan</p>
+          </div>
+          <span class="reco-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TOUR PICKUPS ==================== -->
+  <section class="section" id="tours">
+    <div class="container">
+      <h2 class="section-title fade-in">Tour Pickups</h2>
+      <div class="tour-card fade-in">
+        <div class="tour-info">
+          <p>Many tour companies <strong>pick up from any address</strong> — they can come directly to Holmgardur.</p>
+          <p>If your tour doesn't offer door-to-door pickup, the nearest pickup hotel is:</p>
+        </div>
+        <div class="tour-hotel">
+          <strong>Oddsson Hotel</strong>
+          <p>~10 minute walk from the house</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CHECK-OUT CHECKLIST ==================== -->
+  <section class="section section-cream" id="checkout">
+    <div class="container">
+      <h2 class="section-title fade-in">Check-out Checklist</h2>
+      <p class="section-intro fade-in">Before you go — a quick checklist to help you out.</p>
+      <div class="checklist fade-in" id="checklist">
+        <label class="check-item">
+          <input type="checkbox" data-key="towels">
+          <span class="checkmark"></span>
+          <span class="check-text">Place used towels in the bathroom</span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox" data-key="dishes">
+          <span class="checkmark"></span>
+          <span class="check-text">Wash dishes or run the dishwasher</span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox" data-key="trash">
+          <span class="checkmark"></span>
+          <span class="check-text">Take out the trash</span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox" data-key="keys">
+          <span class="checkmark"></span>
+          <span class="check-text">Leave keys on the kitchen table</span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox" data-key="doors">
+          <span class="checkmark"></span>
+          <span class="check-text">Don't lock the doors</span>
+        </label>
+      </div>
+      <div class="checklist-progress" id="checklistProgress">
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <span class="progress-text" id="progressText">0 of 5 done</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== THANK YOU ==================== -->
+  <section class="section section-dark" id="thankyou">
+    <div class="container thank-you-content fade-in">
+      <h2 class="thankyou-title">Takk fyrir — Thank You</h2>
+      <p class="thankyou-text">Thank you for staying with us at Holmgardur. We hope Iceland gave you memories that last a lifetime.</p>
+      <p class="thankyou-text">If you enjoyed your stay, we'd really appreciate a review — it helps us a lot and means the world to us.</p>
+      <div class="thankyou-host">
+        <p>With warmth,</p>
+        <p class="host-signature">Jón Gunnar</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
