@@ -625,30 +625,17 @@ ul {
   font-size: 0.9rem;
 }
 
-/* Welcome door photo in Quick Reference */
-.welcome-door {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-top: 20px;
-  padding: 16px;
-  background: var(--white);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-sm);
+/* Welcome door photo in Quick Reference card */
+.welcome-item {
+  grid-column: 1 / -1;
 }
 
-.welcome-door img {
-  width: 80px;
-  height: auto;
-  border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-sm);
+.welcome-door-img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 50%;
   flex-shrink: 0;
-}
-
-.welcome-door p {
-  font-size: 0.9rem;
-  color: var(--text-light);
-  font-weight: 500;
 }
 
 /* ============================================
