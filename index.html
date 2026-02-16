@@ -288,55 +288,12 @@
   <section class="section" id="parking">
     <div class="container">
       <h2 class="section-title fade-in">Parking</h2>
-      <div class="parking-card fade-in">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-        <div>
-          <p><strong>Private parking</strong> in front of the house</p>
-          <p class="parking-note">Please do not park on the street — we have a dedicated spot for you.</p>
+      <div class="parking-info fade-in">
+        <p>Parking spot: in front of the house</p>
+        <div class="parking-map">
+          <img src="parking-aerial.png" alt="Aerial view showing the Airbnb parking spot in front of the house" loading="lazy">
         </div>
-      </div>
-      <div class="parking-map fade-in">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d300!2d-21.878998!3d64.124136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sis"
-          allowfullscreen
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-        <svg class="parking-svg" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-          <!-- Red dashed driving path from road to parking -->
-          <path d="M 80,380 C 80,300 120,240 180,200 Q 220,170 280,165"
-                stroke="#e53e3e" stroke-width="2.5" stroke-dasharray="8 5"
-                fill="none" stroke-linecap="round"/>
-          <!-- Arrow at end of path -->
-          <polygon points="278,160 288,165 278,170" fill="#e53e3e"/>
-
-          <!-- Parking area background -->
-          <rect x="285" y="140" width="120" height="55" rx="4"
-                fill="rgba(139,119,90,0.4)" stroke="rgba(139,119,90,0.6)" stroke-width="1"/>
-
-          <!-- Hatched no-park zone (left side of parking) -->
-          <defs>
-            <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-              <line x1="0" y1="0" x2="0" y2="8" stroke="#e53e3e" stroke-width="1.5" opacity="0.6"/>
-            </pattern>
-          </defs>
-          <rect x="287" y="142" width="35" height="51" fill="url(#hatch)" rx="2"/>
-
-          <!-- Car spots (blue rectangles) -->
-          <rect x="325" y="145" width="22" height="42" rx="3" fill="#3182ce" opacity="0.8"/>
-          <rect x="350" y="145" width="22" height="42" rx="3" fill="#3182ce" opacity="0.8"/>
-          <rect x="375" y="145" width="22" height="42" rx="3" fill="#3182ce" opacity="0.8"/>
-
-          <!-- Airbnb label on the parking spot -->
-          <rect x="330" y="192" width="60" height="18" rx="3" fill="rgba(0,0,0,0.7)"/>
-          <text x="360" y="205" text-anchor="middle" fill="white"
-                font-family="'DM Sans', sans-serif" font-size="11" font-weight="600">Airbnb</text>
-
-          <!-- Welcome label near the front door -->
-          <rect x="345" y="230" width="62" height="18" rx="3" fill="rgba(0,0,0,0.7)"/>
-          <text x="376" y="243" text-anchor="middle" fill="white"
-                font-family="'DM Sans', sans-serif" font-size="10" font-weight="500">Welcome</text>
-        </svg>
+        <p class="parking-note">Do not park on the street — we have private parking for you.</p>
       </div>
     </div>
   </section>

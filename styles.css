@@ -602,51 +602,27 @@ ul {
 /* ============================================
    PARKING
    ============================================ */
-.parking-card {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  padding: 24px;
-  background: var(--cream);
-  border-radius: var(--radius);
-}
-
-.parking-card svg {
-  flex-shrink: 0;
-  color: var(--accent);
-}
-
-.parking-card p {
+.parking-info p {
   font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.parking-map {
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow-md);
+}
+
+.parking-map img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .parking-note {
   color: var(--text-light);
-  margin-top: 4px;
-}
-
-.parking-map {
-  position: relative;
-  border-radius: var(--radius);
-  overflow: hidden;
-  margin-top: 16px;
-  box-shadow: var(--shadow-md);
-}
-
-.parking-map iframe {
-  width: 100%;
-  height: 360px;
-  border: 0;
-  display: block;
-}
-
-.parking-svg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
+  font-size: 0.9rem;
 }
 
 /* Welcome door photo in Quick Reference */
